@@ -38,9 +38,11 @@ public static class Pangram
 
         /* To determine if the input is a pangram,
         the frequencies of all letters a-z needs to
-        be one and one only. */
-        foreach (int letterFrequency in letterFrequencies) {
-            if (letterFrequency <= 0) {
+        be at least one. */
+        foreach (int letterFrequency in letterFrequencies)
+        {
+            if (letterFrequency < 1)
+            {
                 result = false;
                 break;
             }
